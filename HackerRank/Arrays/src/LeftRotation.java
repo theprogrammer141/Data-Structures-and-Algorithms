@@ -16,12 +16,12 @@ public class LeftRotation {
         d = d % n;
         List<Integer> temp = new ArrayList<>(arr.subList(0, d));
 
-        for(int i = 0; i < arr.size() - d; i++){
+        for(int i = 0; i < n - d; i++){
             arr.set(i, arr.get(i + d));
         }
 
         for(int i = 0; i < d; i++){
-            arr.set(arr.size() - d + i, temp.get(i));
+            arr.set(n - d + i, temp.get(i));
         }
 
         return arr;
