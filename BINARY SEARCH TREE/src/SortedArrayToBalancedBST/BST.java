@@ -30,7 +30,7 @@ public class BST {
 
         int mid = (start + end) / 2;
         Node root = new Node(arr[mid]);
-        root.left = createBST(arr, start, mid - 1);
+        root.left = createBST(arr, 0, mid - 1);
         root.right = createBST(arr, mid + 1, end);
         return root;
     }
