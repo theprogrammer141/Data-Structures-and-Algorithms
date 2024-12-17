@@ -2,9 +2,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Compile and run",
+            "label": "Compile and Run All Java Files",
             "type": "shell",
-            "command": "java demo.java < input.txt > output.txt",
+            "command": "for %f in (*.java) do java %f < input.txt > output.txt",
             "presentation": {
                 "reveal": "always",
                 "focus": false,
@@ -13,18 +13,6 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "problemMatcher": {
-                "owner": "java",
-                "fileLocation": ["relative", "."],
-                "pattern": {
-                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
-                    "file": 1,
-                    "line": 2,
-                    "column": 3,
-                    "severity": 4,
-                    "message": 5
-                }
             }
         }
     ]
